@@ -8,8 +8,8 @@ ENV LANG C.UTF-8
 # See: https://github.com/Docker-Hub-frolvlad/docker-alpine-python3/pull/13
 ENV PYTHONUNBUFFERED=1
 # User
-ARG GNAME=octolab
-ARG UNAME=octopus
+ARG GNAME=gitpod
+ARG UNAME=gitpod
 ARG GID=1000
 ARG UID=1000
 ARG REQUIREMENTS=requirements.txt
