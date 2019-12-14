@@ -21,7 +21,7 @@ ENV PIP_PARAMS --no-cache-dir --disable-pip-version-check
 # other runtime dependencies for Python are installed later
 RUN apk add --update ${APK_PARAMS} \
     shadow sudo git curl wget bash \
-    build-base go \
+    build-base go bash-completion \
     nodejs npm yarn
 
 RUN echo "**** Add user ${UNAME} ****" && \
