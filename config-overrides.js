@@ -10,6 +10,7 @@ const devServerConfig = () => config => {
     return {
         ...config,
         clientLogLevel: 'warn',
+        allowedHosts: ['localhost', '.gitpod.io'],
         // transportMode: 'ws',
         // https: true,
         //   port: 3000,
