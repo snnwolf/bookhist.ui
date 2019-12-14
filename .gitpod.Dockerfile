@@ -84,9 +84,9 @@ RUN echo "**** Add user ${UNAME} ****" && \
 # -v /path/to/data:/u01/data
 # for ssh connect
 # -v /home/$USER/.ssh/id_sber:/root/.ssh/id_rsa
-RUN chmod 777 /tmp
+# RUN chmod 777 /tmp
 # RUN chown -R ${UNAME}:${GNAME} /u01
 # RUN chown -R ${UNAME}:${GNAME} /home/${UNAME}
 # WORKDIR /u01
-USER ${UNAME}
-CMD ["/bin/bash"]
+# USER ${UNAME}
+# CMD ["/bin/bash"]
