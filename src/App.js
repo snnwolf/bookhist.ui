@@ -1,14 +1,13 @@
 import React from 'react';
-import './App.css';
+import MainPage from './pages/Main';
+
+import './App.scss';
 
 function App() {
   return (
     <div className="app">
-      <header className="app-header">
-        header
-      </header>
       <main>
-          Главное содержимое
+          <MainPage />
       </main>
     </div>
   );

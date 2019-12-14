@@ -9,9 +9,9 @@ const devServerConfig = () => config => {
     console.log(config);
     return {
         ...config,
-        // transportMode: 'ws',
         clientLogLevel: 'warn',
-        https: true,
+        // transportMode: 'ws',
+        // https: true,
         //   port: 3000,
         //   proxy: {
         //     '/app/v1': {
