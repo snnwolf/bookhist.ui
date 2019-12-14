@@ -19,19 +19,9 @@ ENV PIP_PARAMS --no-cache-dir --disable-pip-version-check
 
 # install ca-certificates so that HTTPS works consistently
 # other runtime dependencies for Python are installed later
-RUN apk add --update ${APK_PARAMS} ca-certificates tzdata net-tools which shadow sudo git curl wget bash \
-    # openssh mc
-    # для личного удобства
-    # mc htop ncurses \
-    # jpeg libxslt \
-    # возможно удалить с переносом в .pip-deps (см. ниже)
-    # python3-dev gcc build-base \
-    # postgres
-    # postgresql-libs postgresql-client \
-    # redis openssh-client libxrender libxext fontconfig \
-    # для генератора pdf
-    # ttf-dejavu ttf-droid ttf-freefont ttf-liberation ttf-ubuntu-font-family \
-    # wkhtmltopdf \
+RUN apk add --update ${APK_PARAMS} \
+    shadow sudo git curl wget bash \
+    build-base \
     nodejs npm yarn
 
 RUN echo "**** Add user ${UNAME} ****" && \
@@ -88,5 +78,5 @@ RUN echo "**** Add user ${UNAME} ****" && \
 # RUN chown -R ${UNAME}:${GNAME} /u01
 # RUN chown -R ${UNAME}:${GNAME} /home/${UNAME}
 # WORKDIR /u01
-# USER ${UNAME}
+USER ${UNAME}
 # CMD ["/bin/bash"]

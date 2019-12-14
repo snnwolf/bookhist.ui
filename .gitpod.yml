@@ -8,6 +8,6 @@ ports:
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/44_config_start_tasks/
 tasks:
-  - before: export DANGEROUSLY_DISABLE_HOST_CHECK=true
+  - # before: export DANGEROUSLY_DISABLE_HOST_CHECK=true
     init: yarn install # runs during prebuild
-    command: yarn start # npm run dev
+    command: yarn start --host 0.0.0.0 # npm run dev
