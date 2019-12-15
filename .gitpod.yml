@@ -11,4 +11,4 @@ tasks:
   - # before: export DANGEROUSLY_DISABLE_HOST_CHECK=true
     # runs during prebuild
     init: yarn install && /bin/bash ./bin/post-init.sh
-    command: yarn start --host 0.0.0.0 # npm run dev
+    command: yarn start # npm run dev
