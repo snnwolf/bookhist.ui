@@ -4,10 +4,11 @@ image:
 # List the ports you want to expose and what to do when they are served. See https://www.gitpod.io/docs/43_config_ports/
 ports:
   - port: 3000
-    onOpen: ignore # open-preview
+    onOpen: open-preview
 
 # List the start up tasks. You can start them in parallel in multiple terminals. See https://www.gitpod.io/docs/44_config_start_tasks/
 tasks:
   - # before: export DANGEROUSLY_DISABLE_HOST_CHECK=true
-    init: yarn install # runs during prebuild
+    # runs during prebuild
+    init: yarn install && /bin/bash ./bin/post-init.sh
     command: yarn start --host 0.0.0.0 # npm run dev

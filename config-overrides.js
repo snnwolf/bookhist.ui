@@ -3,7 +3,7 @@ const {
     // addWebpackAlias,
     overrideDevServer,
 } = require("customize-cra");
-const path = require("path");
+// const path = require("path");
 
 const devServerConfig = () => config => {
     console.log(config);
