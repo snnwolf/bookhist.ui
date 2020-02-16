@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import loadable from "@loadable/component";
-import Loading from "./Components/Loading";
+import Loading from "./components/Loading";
 import "./App.less";
 import { Layout, Menu } from "antd";
 

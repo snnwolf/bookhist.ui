@@ -22,7 +22,7 @@ ENV PIP_PARAMS --no-cache-dir --disable-pip-version-check
 RUN apk add --update ${APK_PARAMS} \
     shadow sudo git curl wget bash \
     build-base go bash-completion \
-    nodejs npm yarn
+    nodejs npm
 
 RUN echo "**** Add user ${UNAME} ****" && \
     addgroup -S -g ${GID} ${GNAME} && \
